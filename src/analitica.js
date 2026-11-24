@@ -131,7 +131,22 @@ function topProductosPorValor(ventas, k) {
   return lista.slice(0, k);
 }
 
+// ---------- Reto 4 ----------
+
+// Devuelve solo las ventas de una fecha, por ejemplo "2026-09-01".
+// Si ese día no hubo ventas devuelve un arreglo vacío [].
+function ventasDelDia(ventas, fecha) {
+  const delDia = [];
+  for (const venta of ventas) {
+    if (venta.fecha === fecha) {
+      delDia.push(venta);
+    }
+  }
+  return delDia;
+}
+
 module.exports = {
+  ventasDelDia,
   valorVenta,
   totalVendido,
   unidadesVendidas,
